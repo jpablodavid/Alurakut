@@ -167,18 +167,18 @@ AlurakutMenu.Logo = styled.img`
 	height: 34px;
 `;
 
-function AlurakutMenuProfileSidebar({ githubUser }) {
+function AlurakutMenuProfileSidebar(props) {
 	return (
 		<div className="alurakutMenuProfileSidebar">
 			<div>
 				<img
-					src={`https://github.com/${githubUser}.png`}
+					src={`https://github.com/${props.githubUser}.png`}
 					style={{ borderRadius: "8px" }}
 				/>
 				<hr />
 				<p>
-					<a className="boxLink" href={`/user/${githubUser}`}>
-						@{githubUser}
+					<a className="boxLink" href={`/user/${props.githubUser}`}>
+						@{props.githubUser}
 					</a>
 				</p>
 				<hr />
